@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/postcards/static/css/main.fa7f6449.css",
+    "main.js": "/postcards/static/js/main.abb9ef4c.js",
+    "index.html": "/postcards/index.html",
+    "static/media/letter_spacing.svg": "/postcards/static/media/letter_spacing.69575806944a9778c0f1de217a7ce23b.svg",
+    "static/media/line_height.svg": "/postcards/static/media/line_height.a3999814a31f9179f8ef7d7250be12a9.svg",
+    "static/media/align_right.svg": "/postcards/static/media/align_right.1f3493a2f661c482a0e0703cf4eb4285.svg",
+    "static/media/align_center.svg": "/postcards/static/media/align_center.1f88476a39f7f83bc4f49da9cecc6a9b.svg",
+    "static/media/align_justify.svg": "/postcards/static/media/align_justify.0b2f7ca336a46a953569754f736f065c.svg",
+    "static/media/align_left.svg": "/postcards/static/media/align_left.676956bef6e2151ba1a5697aef965beb.svg",
+    "static/media/font_size.svg": "/postcards/static/media/font_size.40be110e5472d3b7c1c6e91e3824c4a9.svg",
+    "static/media/arrow_down.svg": "/postcards/static/media/arrow_down.4b6721b3031f7328fadda7f32fd4748d.svg",
+    "main.fa7f6449.css.map": "/postcards/static/css/main.fa7f6449.css.map",
+    "main.abb9ef4c.js.map": "/postcards/static/js/main.abb9ef4c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa7f6449.css",
+    "static/js/main.abb9ef4c.js"
+  ]
+}
