@@ -26,9 +26,9 @@ const Container = styled.div`
 display: flex;
 align-items: center;
 justify-content: center;
-height: 40px;
 flex: 1;
 cursor: pointer;
+height: 100%;
 `;
 
 export default ButtonIcon;

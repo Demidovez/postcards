@@ -7,25 +7,24 @@ type TItemProps = {
 
 const SettingsLayoutItem = ({ label, Block }: TItemProps) => {
   return (
-    <Container>
+    <div>
       <Header>{label}</Header>
       <Block />
-    </Container>
+    </div>
   );
 };  
-
-const Container = styled.div`
-
-`;
 
 const Header = styled.h4`
 font-family: inherit;
 font-weight: 600;
 font-size: 11px;
-line-height: 13px;
+line-height: 16px;
 letter-spacing: 0.6px;
+padding-left: 1px;
 text-transform: uppercase;
 color: #788994;
+margin-bottom: 8px;
+margin-top: 16px;
 `;
   
 export default SettingsLayoutItem;

@@ -22,7 +22,7 @@ const SettingsLayout: React.FC<SettingsProps> & TSettingsLayout = ({ children })
 
 const Container = styled.div`
 background-color: #FFFFFF;
-max-width: 240px;
+max-width: 210px;
 width: 100%;
 display: flex;
 flex-direction: column;

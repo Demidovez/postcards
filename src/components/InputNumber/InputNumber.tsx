@@ -38,6 +38,8 @@ flex: 1;
 text-indent: 10px;
 width: 100%;
 outline: none;
+font-size: 12px;
+font-family: inherit;
 
 &::-webkit-outer-spin-button,
 &::-webkit-inner-spin-button {

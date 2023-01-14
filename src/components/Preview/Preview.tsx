@@ -36,8 +36,8 @@ const Preview = () => {
 
 const Container = styled.div`
 background-color: #FFFFFF;
-min-width: 600px;
-width: 50%;
+min-width: 500px;
+width: 45%;
 padding: 30px;
 display: flex;
 `;

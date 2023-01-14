@@ -22,7 +22,7 @@ const Dropdown = ({ items, colorPicker = false, onSelect, value, flex = 1 }: IPr
         }
         <Value>{value}</Value>
       </Content>
-      <ArrowDownSVG stroke='#AAB2BB'/>
+      <Icon><ArrowDownSVG stroke='#AAB2BB'/></Icon>
       {
         isOpen && (
           <Data>
@@ -43,12 +43,11 @@ const Container = styled.div<{flex: number}>`
 display: flex;
 align-items: center;
 justify-content: space-between;
-height: 40px;
-padding-right: 10px;
 transition: all 0.2s;
 cursor: pointer;
 flex: ${({ flex }) => flex};
 position: relative;
+height: 100%;
 
 &:hover {
     border-color: #d8dce0; 
@@ -57,18 +56,17 @@ position: relative;
 
 const Content = styled.div`
 display: flex;
-gap: 10px;
-padding-left: 15px;
 `;
 
 const Value = styled.span`
 font-family: inherit;
 font-weight: 400;
 font-size: 12px;
-line-height: 14px;
+line-height: 16px;
 display: flex;
 align-items: center;
 color: #2D3A41;
+padding-left: 15px;
 `;
 
 const ColorSquere = styled.div<{color: string}>`
@@ -76,6 +74,13 @@ width: 18px;
 height: 18px;
 background: ${({ color }) => color};
 border-radius: 3px;
+margin-left: 11px;
+`;
+
+const Icon = styled.span`
+display: flex;
+padding-right: 9px;
+margin-top: -2px;
 `;
 
 const Data = styled.div`

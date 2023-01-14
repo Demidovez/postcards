@@ -24,7 +24,7 @@ border-radius: 4px;
 border: none;
 
 font-family: inherit;
-font-weight: 600;
+font-weight: 400;
 font-size: 13px;
 line-height: 16px;
 color: #FFFFFF;

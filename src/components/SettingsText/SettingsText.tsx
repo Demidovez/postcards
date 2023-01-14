@@ -60,13 +60,13 @@ const SettingsText = () => {
           items={weights} 
           value={settings.fontWeight} 
           onSelect={(weight) => dispatch(setFontWeight(weight))}
-          flex={4}
+          flex={68}
         />
         <InputNumber 
           Icon={FontSizeSVG} 
           value={settings.fontSize} 
           onSelect={(size) => dispatch(setFontSize(size))}
-          flex={2}
+          flex={32}
         />
       </Row>
       <Row>
@@ -128,6 +128,7 @@ gap: 10px;
 `;
 
 const Row = styled.div`
+height: 38px;
 border: 1px solid #E8ECF0;
 border-radius: 4px;
 display: flex;
