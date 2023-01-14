@@ -1,10 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 
-const Preview = () => {
-  const [ text, setText ] = useState('');
+import { useAppSelector } from '../../hooks/hooks';
+import { initialSettingsTextState, SettingsTextState } from '../../store/slices/settingsTextSlice';
+import { SettingsTextStatus, TextAlign, TextWeight } from '../../types/types';
 
-  console.log(text);
+type TPreviewSettings = Omit<SettingsTextState, 'status'>
+
+const Preview = () => {
+  const [ text, setText ] = useState('Type Here...');
+  const [ settings, setSettings ] = useState<TPreviewSettings>(initialSettingsTextState);
+
+  const { status, ...editingSettings } = useAppSelector(state => state.settings);
+
+  useEffect(() => {
+    if (status === SettingsTextStatus.APPLIED) {
+      setSettings(editingSettings);
+    }
+  }, [status]);
 
   const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(event.target.value);
@@ -12,7 +25,11 @@ const Preview = () => {
 
   return (
     <Container>
-      <Textarea onChange={onChangeText} placeholder="Type Here..." value={text}/>
+      <Textarea 
+        onChange={onChangeText} 
+        value={text} 
+        settings={settings}
+      />
     </Container>
   );
 };
@@ -25,20 +42,18 @@ padding: 30px;
 display: flex;
 `;
 
-const Textarea = styled.textarea`
+const Textarea = styled.textarea<{settings: TPreviewSettings}>`
+font-family: ${({ settings }) => settings.fontFamily};
+font-weight: ${({ settings }) => TextWeight[settings.fontWeight]};
+font-size: ${({ settings }) => settings.fontSize}pt;
+color: ${({ settings }) => settings.color};
+line-height: ${({ settings }) => settings.lineHeight}%;
+letter-spacing: ${({ settings }) => settings.letterSpacing}px;
+text-align: ${({ settings }) => TextAlign[settings.align]};
 width: 100%;
 resize: none;
 outline: none;
 border: none;
-
-&::placeholder {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    color: black
-}
 `;
 
 export default Preview;

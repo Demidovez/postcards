@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 import Preview from './components/Preview/Preview';
-import Settings from './components/Settings/Settings';
+import SettingsLayout from './components/SettingsLayout/SettingsLayout';
+import SettingsText from './components/SettingsText/SettingsText';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <Content>
         <Preview />
       </Content>
-      <Settings />
+      <SettingsLayout>
+        <SettingsLayout.Item label="Text" Block={SettingsText} />
+      </SettingsLayout>
     </Container>
   );
 }
